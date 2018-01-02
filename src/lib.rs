@@ -316,6 +316,10 @@ macro_rules! impl_bench {
                 }
             }).collect();
 
+            if let Some(&x) = test_data.get(0) {
+                b.bytes =  (test_data.len() * ::std::mem::size_of_val(&x)) as u64;
+            }
+
             b.iter(|| {
                 let mut output = Vec::new();
                 let mut position = 0;
