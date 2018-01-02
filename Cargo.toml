@@ -1,0 +1,6 @@
+[package]
+name = "encoding-bench"
+version = "0.1.0"
+authors = ["Michael Woerister <michaelwoerister@posteo.net>"]
+
+[dependencies]
